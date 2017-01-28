@@ -1,7 +1,55 @@
 doctype html
 html
     head
-        title Halo
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Mat Soleh
+        link(rel="stylesheet", href="assets/css/bootstrap.min.css")
+        link(rel="stylesheet", href="assets/css/font-awesome.min.css")
+        link(rel="stylesheet", href="assets/css/main.css")
     body
-        h1 Sugeng Rawuh
-        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus impedit non repudiandae consectetur error obcaecati velit atque rem eveniet deserunt praesentium optio incidunt quisquam assumenda molestias earum, consequuntur minus!
+        .se-pre-con
+        .navigasi
+            .navigasi-header
+                img(src="assets/img/me-logo.png")
+                h1.brand MATT
+                    small SOLEH
+            .navigasi-content
+                ul.navigasi-navs
+                    li
+                        a(href="#", title="Beranda") Beranda
+                    li
+                        a(href="#me", title="Tentang Aku") Aku?
+                    li
+                        a(href="#portfolio", title="Portofolio") Pekerjaanku
+                    li.submenu
+                        a.submenu-trigger(href="javascript:void(0)", title="Blogs") Banyak Hal
+                        ul#submenu
+                            li
+                                a(href="#ngajar", title="Sampaikan walau satu ayat") PAI
+                            li
+                                a(href="#hobi", title="Desain Web") Desain Web
+                    li
+                        a(href="#contact", title="Mari Bicara") Mari Bicara
+
+        .page#landing
+            .kamut.panel
+                .panel-head
+                    button.close &times;
+                h3 Jangan sesali yang telah terjadi, perbaiki untuk yang menanti
+                p -Anonimus
+        .page#me
+            h1 Short text of me
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus veniam quas accusamus odio similique eaque impedit nobis! Cumque similique deleniti quaerat beatae, odio, autem sed error, tempore explicabo accusamus commodi!
+        
+        .page#portfolio
+            h1 What I've done
+
+        .page#contact
+            h1 What I've done
+
+
+        footer
+
+        script(src="assets/js/jquery-1.12.3.min.js")
+        script(src="assets/js/me.js")
