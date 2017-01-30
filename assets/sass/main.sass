@@ -1,3 +1,6 @@
+@font-face
+	font-family: 'Mallana'
+	src: url('../fonts/Mallanna-Regular.ttf')
 
 html,
 body,
@@ -26,6 +29,72 @@ body
 		z-index: 2
 		background: url("../img/preloader.gif") center no-repeat #000
 		
+	.menuTrigger
+		position: fixed
+		width: 50px
+		height: 50px
+		right: 10px
+		top: 5px
+		z-index: 10
+		background: transparent
+		cursor: pointer
+		display: block
+		display: none
+
+
+		span
+			margin-top: 20px
+	
+
+	.menuTrigger span, .menuTrigger span:before, .menuTrigger span:after
+		cursor: pointer
+		border-radius: 1px
+		width: 30px
+		background: #333
+		position: absolute
+		display: block
+		content: ''
+
+
+	.menuTrigger span:before
+		top: -5px
+		height: 3px
+
+
+	.menuTrigger span:after
+		bottom: -10px
+		height: 3px
+
+	.menuTrigger span, .menuTrigger span:before, .menuTrigger span:after
+		-webkit-transition: all 0.2s ease-in-out
+		-moz-transition: all 0.2s ease-in-out
+		-o-transition: all 0.2s ease-in-out
+		transition: all 0.2s ease-in-out
+		
+	.menuTrigger.triggerActive span
+		background-color: transparent
+
+	.menuTrigger.triggerActive span:before, .menuTrigger.triggerActive span:after
+		top: 0
+
+	.menuTrigger.triggerActive span:before 
+		transform: rotate(45deg)
+
+	.menuTrigger.triggerActive span:after
+		transform: rotate(-45deg)
+
+	.menuSisi
+		display: none
+		width: 75%
+
+		ul
+			list-style: none
+			li
+				padding: 10px 0
+				a
+					display: block
+					text-decoration: none
+					color: #eee
 
 	.navigasi
 		height: 100px
@@ -54,11 +123,15 @@ body
 			/*background: red*/
 			height: 100px
 			float: left
+			display: table-cell
+			vertical-align: middle
+			font-family: 'Mallana'
 
 			.navigasi-navs
 				display: block
-				height: 100px
+				/*height: 100px*/
 				float: right
+				margin: 0
 				/*background: rgba(200, 90, 90, 0.7)*/
 
 				li
@@ -74,24 +147,8 @@ body
 						background: rgba(255,255,255, 0.6)
 
 						li
-							line-height: 10px
-					&:hover
-						ul
-							display: block
-							position: absolute
-
-							li
-								float: none
-								
-								width: 150px
-							
-								a
-									padding: 20px
-									display: block
-									height: 30px
-									&:hover
-										background:
-											position: center center
+							/*line-height: 50px*/
+					
 
 								
 					a
@@ -102,7 +159,9 @@ body
 							image: linear-gradient(to bottom, rgba(0,0,0,0) 70%, #23aa55 30%)
 							size: auto 200%
 							position: top center
-						height: 100px
+						/*height: 100px*/
+						/*line-heigt: 100px*/
+						text-decoration: none
 						transition: all 0.35s linear
 						&:hover,
 						&:active,
@@ -112,22 +171,16 @@ body
 							text-decoration: none
 							color: #111
 					
-					
-
-					
-						
-				
-
-
-
 	#landing
+
 		background: url('../img/bg_land.jpg')
 			size: 100% auto
 			attachment: fixed
 			position: bottom center
 		position: relative
 		height: 100vh
-		padding-top: 150px
+		padding: 150px 50px
+		box-sizing: border-box
 
 		.kamut
 			box-sizing: border-box
@@ -143,10 +196,94 @@ body
 			h3
 				margin-bottom: 15px
 				font-weight: 600
-				
+			
+			.panel-head
+				button.close
+					background: transparent!important
+					border: none
+					cursor: pointer
+					font-size: 2em
+					float: right
+					filter: drop-shadow(0 0 1px rgba(200,200,200,0.5))
+		
+	#me
+		height: 100vh
+		background: #eee
+		.content
+			box-sizing: border-size
+			padding: 20px
+			position: relative
 
-@media screen and(max-width: 320px)
+			.me-profil
+				background:
+					
+					position: center center
+					image: url('../img/me.png'), radial-gradient(#eee, #555)
+					size: 150px
+					attachment: auto
+					repeat: no-repeat
+				/*position: absolute*/
+				top: 100px
+				left: 50%
+				width: 150px
+				height: 150px
+				border-radius: 50%
+				margin: 20px auto
+			.me-text
+				text-align: center
+				width: 50%
+				margin: auto
+				font-family: 'Mallana'
+
+
+@media(max-width: 1024px)
+	a.menuTrigger
+		display: block
+	
+	.menuSisi
+		display: block !important
+		position: fixed
+		top: 50px
+		right: -75%
+		background: rgba(0,25,0,0.95)
+		z-index: 5
+		font-family: 'Open Sans'
+		transition: all 0.35s linear 0s
+		padding: 5px 10px !important
+		box-sizing: border-box
+		li
+			border-bottom: 1px dotted #eee
+
+	.menuSisi.show
+		transition: all 0.35s linear 0s
+		right: 0!important
+
+	.navigasi
+		height: 50px!important
+		position: fixed!important
+		background:
+			color: black
+		
+		.navigasi-header
+			img
+				height: 50px
+			
+			.brand
+				line-height: 50px!important
+				margin-left: 60px!important
+
+		.navigasi-content
+			display: none!important
 	#landing
 		background:
-			size: auto 100%
-			repeat: no-repeat
+			size: auto 100% !important
+			repeat-y: no-repeat !important
+		height: 60vh!important
+
+		.kamut
+			left: 10px!important
+			right: 10px
+			bottom: 10px !important
+			background: rgba(0,0,0, 0.7)!important
+			font-size: 1em
+			font-family: sans-serif

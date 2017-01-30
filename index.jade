@@ -4,7 +4,7 @@ html
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Mat Soleh
-        link(rel="stylesheet", href="assets/css/bootstrap.min.css")
+        //- link(rel="stylesheet", href="assets/css/bootstrap.min.css")
         link(rel="stylesheet", href="assets/css/font-awesome.min.css")
         link(rel="stylesheet", href="assets/css/main.css")
     body
@@ -12,7 +12,7 @@ html
         .navigasi
             .navigasi-header
                 img(src="assets/img/me-logo.png")
-                h1.brand MATT
+                h1.brand MATT|
                     small SOLEH
             .navigasi-content
                 ul.navigasi-navs
@@ -32,6 +32,23 @@ html
                     li
                         a(href="#contact", title="Mari Bicara") Mari Bicara
 
+        a.menuTrigger(href="")
+            span
+            span
+
+        .menuSisi
+            ul.sideNav
+                li
+                    a(href="#") Beranda
+                li
+                    a(href="#me") Aku?
+                li
+                    a(href="#portfolio") Pekerjaanku
+                li
+                    a(href="#blogs") Banyak Hal
+                li
+                    a(href="#contact") Mari Bicara
+
         .page#landing
             .kamut.panel
                 .panel-head
@@ -39,9 +56,14 @@ html
                 h3 Jangan sesali yang telah terjadi, perbaiki untuk yang menanti
                 p -Anonimus
         .page#me
-            h1 Short text of me
-            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus veniam quas accusamus odio similique eaque impedit nobis! Cumque similique deleniti quaerat beatae, odio, autem sed error, tempore explicabo accusamus commodi!
-        
+            .content
+                .me-profil
+                .me-text
+                    h1 Aku?
+                    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus veniam quas accusamus odio similique eaque impedit nobis! Cumque similique deleniti quaerat beatae, odio, autem sed error, tempore explicabo accusamus commodi!
+                .me-world
+                
+
         .page#portfolio
             h1 What I've done
 

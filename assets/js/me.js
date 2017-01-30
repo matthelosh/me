@@ -5,6 +5,14 @@ $(document).ready(function(){
     $(".close").click(function(){
         $(this).closest(".panel").fadeOut();
     });
+
+    $(".menuTrigger").on("click", function(e){
+    e.preventDefault();
+    $(this).toggleClass("triggerActive");
+
+    $(".menuSisi").toggleClass("show");
+    
+  });
 });
 
 $(window).scroll(function(){
